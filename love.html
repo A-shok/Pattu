@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg">
+<div class="overlay"></div>
+
+<div class="card">
+  <h2>From Office to Heart 💖</h2>
+
+  <p class="text">
+    From office roles to real life,<br>
+    I don’t want to clock out from loving you ❤️<br><br>
+
+    I promise to stand with you,<br>
+    support your dreams,<br>
+    and choose you every day 🤞
+  </p>
+
+  <button onclick="hearts()">I Love You 💘</button>
+</div>
+
+<script>
+function hearts(){
+  for(let i=0;i<20;i++){
+    let h=document.createElement("div");
+    h.innerText="❤️";
+    h.className="heart";
+    h.style.left=Math.random()*100+"%";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),3000);
+  }
+}
+</script>
+</body>
+</html>
